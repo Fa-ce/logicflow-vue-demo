@@ -1,0 +1,21 @@
+{
+	"name": "vue2-logicflow-demo",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build"
+	},
+	"dependencies": {
+		"@logicflow/core": "^2.1.1",
+		"@logicflow/extension": "^2.1.2",
+		"element-ui": "^2.15.14",
+		"sass": "^1.91.0",
+		"sass-loader": "^16.0.5",
+		"vue": "^2.7.16",
+		"vue-contextmenujs": "^1.4.11"
+	},
+	"devDependencies": {
+		"@vue/cli-service": "^5.0.9"
+	}
+}
