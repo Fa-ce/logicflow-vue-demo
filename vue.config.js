@@ -6,10 +6,23 @@ function resolve(dir) {
 
 module.exports = defineConfig({
 	transpileDependencies: true,
+	publicPath: "./", // 相对路径，确保 dist 下 index.html 能正确找到 js/css
 	configureWebpack: {
 		resolve: {
 			alias: {
 				"@": resolve("src"),
+			},
+		},
+		optimization: {
+			splitChunks: {
+				chunks: "all",
+				cacheGroups: {
+					vendor: {
+						test: /[\\/]node_modules[\\/]/,
+						name: "vendors",
+						chunks: "all",
+					},
+				},
 			},
 		},
 		// 开启 sourceMap

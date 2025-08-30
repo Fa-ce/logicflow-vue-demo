@@ -1,12 +1,14 @@
 # Vue2 + LogicFlow Demo
 
 ## 运行
+
 ```bash
-npm install
-npm run serve
+corepack use pnpm
+pnpm  serve
 ```
 
 ## 放置与规则
+
 - 左侧点击选择要创建的节点类型，点击画布放置。
 - 默认存在“开始”节点。
 - 仅允许 `开始 -> 容器` 连线，其他连线不允许。
