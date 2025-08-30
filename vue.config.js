@@ -6,11 +6,11 @@ function resolve(dir) {
 
 module.exports = defineConfig({
 	transpileDependencies: true,
-	// publicPath: "./", // 相对路径，确保 dist 下 index.html 能正确找到 js/css
-	publicPath:
-		process.env.NODE_ENV === "production"
-			? "/logicflow-vue-demo/" // 你的仓库名
-			: "/",
+	publicPath: "./", // 相对路径，确保 dist 下 index.html 能正确找到 js/css
+	// publicPath:
+	// 	process.env.NODE_ENV === "production"
+	// 		? "/logicflow-vue-demo/" // 你的仓库名
+	// 		: "/",
 	configureWebpack: {
 		resolve: {
 			alias: {
