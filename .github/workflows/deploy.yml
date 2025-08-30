@@ -5,34 +5,38 @@ on:
     branches:
       - master # 你要部署的分支，通常是 master
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: pwd
+        run: pwd
+
+      - name: Checkout code 读取仓库内容
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          # node-version: 18
+          node-version: 18
           cache: pnpm # 如果你用 npm 就改成 npm
 
-      - name: pwd
-        run: pwd
-
-      - name: version
+      - name: version 查看 node 版本
         run: node -v
 
-      - name: Install dependencies
+      - name: Install dependencies 安装依赖
         run: pnpm install --frozen-lockfile
 
-      - name: Build project
+      - name: Build project 打包项目
         run: pnpm build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages 部署
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist # Vue CLI / Vite / React 默认打包目录
+          branch: gh-pages
