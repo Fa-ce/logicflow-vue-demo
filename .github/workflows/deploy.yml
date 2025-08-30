@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ">=18"
+          node-version: 18
           cache: "pnpm" # 如果你用 npm 就改成 npm
 
       - name: Install pnpm 安装 pnpm
