@@ -23,7 +23,7 @@ jobs:
         run: pwd
 
       - name: version
-        run: node -v & pnpm -v
+        run: node -v
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
