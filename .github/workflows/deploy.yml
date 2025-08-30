@@ -22,11 +22,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: pnpm # 如果你用 npm 就改成 npm
+          node-version: ">=18"
+          cache: "pnpm" # 如果你用 npm 就改成 npm
 
-      - name: version 查看 node 版本
-        run: node -v
+      - name: Install pnpm 安装 pnpm
+        run: npm install -g pnpm
+
+      - name: version 查看版本
+        run: node -v; pnpm -v
 
       - name: Install dependencies 安装依赖
         run: pnpm install --frozen-lockfile
