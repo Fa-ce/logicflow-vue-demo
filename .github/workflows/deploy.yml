@@ -10,14 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      # - name: Checkout code
+      #   uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: pnpm # 如果你用 npm 就改成 npm
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: 18
+      #     cache: pnpm # 如果你用 npm 就改成 npm
+
+      - name: pwd
+        run: pwd
+
+      - name: version
+        run: node -v & pnpm -v
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
