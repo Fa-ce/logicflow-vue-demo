@@ -15,9 +15,6 @@ jobs:
     steps:
       - name: pwd
         run: pwd
-        
-      - name: Blog Post Workflow
-        uses: gautamkrishnar/blog-post-workflow@1.9.4
 
       - name: Checkout code 读取仓库内容
         uses: actions/checkout@v4
