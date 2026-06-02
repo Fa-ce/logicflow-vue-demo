@@ -1,8 +1,8 @@
 name: Update readme
 
-on:
+于:
   push:
-    branches:
+    分支:
       - master
 
 permissions:
@@ -17,6 +17,7 @@ jobs:
       - name: Update README with readme
         uses: gautamkrishnar/blog-post-workflow@1.9.4
         with:
+          feed_list: "https://feed.vuejs.org/;https://javascriptweekly.com/rss/cv9r8n4x0"
           gh_token: ${{ secrets.GITHUB_TOKEN }}
           max_post_count: 5
           disable_item_validation: true
