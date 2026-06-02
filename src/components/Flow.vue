@@ -317,7 +317,7 @@ export default {
 
 		keyboardCopyHandler() {
 			const elements = this.lf.getSelectElements(true);
-			debugger;
+			// debugger;
 			// this.lf.clearSelectElements();
 			// elements.edges.forEach((edge) => this.lf.deleteEdge(edge.id));
 			// elements.nodes.forEach((node) => this.lf.deleteNode(node.id));
